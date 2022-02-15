@@ -1,0 +1,36 @@
+@import './variables';
+body{
+    
+    font-family: 'Baloo Bhai 2', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: $dark;
+   
+}
+
+nav li a{
+    transition: $smooth;
+    &:hover{
+        color: $primary;
+    }
+}
+nav li:last-child a{
+    // &:hover{
+    //     background-color:$primary-hover;
+    // }
+}
+section.hero{
+    background: $secondary;
+}
+.size {
+background: $secondary;
+}
+.add-to-cart {
+    border: 2px solid $primary;
+    color: $primary;
+   transition: $smooth;
+   &:hover {
+        background: $primary;
+        border-color: $pure;
+        color: $pure;
+   }
+}
