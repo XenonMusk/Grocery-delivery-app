@@ -34,3 +34,25 @@ background: $secondary;
         color: $pure;
    }
 }
+.btn-primary{
+    transition: $smooth;
+    background-color: $primary;
+    transform: smooth;
+    &:hover{
+        background: $primary-hover;
+    }}
+section.cart{
+    background: $secondary;
+    .amount{
+       color: $primary;
+    }
+}
+section.login{
+    background: $secondary;
+   a{
+       color: $primary;
+       &:hover{
+           color: $primary-hover;
+       }
+   }
+}

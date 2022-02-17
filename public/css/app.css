@@ -29,3 +29,29 @@ section.hero {
   border-color: #fff;
   color: #fff;
 }
+
+.btn-primary {
+  transition: all 0.3s ease-in-out;
+  background-color: #FE5F1E;
+  transform: smooth;
+}
+.btn-primary:hover {
+  background: #b23301;
+}
+
+section.cart {
+  background: #F8F8F8;
+}
+section.cart .amount {
+  color: #FE5F1E;
+}
+
+section.login {
+  background: #F8F8F8;
+}
+section.login a {
+  color: #FE5F1E;
+}
+section.login a:hover {
+  color: #b23301;
+}
