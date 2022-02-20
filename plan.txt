@@ -7,14 +7,25 @@ Create a NPM project and install all dependancies //
     Dev dependancies
      nodemon
 
-Create Express server - Create a server.js file
+Create Express server - Create a server.js file //
 
-Create Home page using Html and Css
+Create Home page using Html and Css  //
  include tailwind css
 
-Create Cart page
+Create Cart page //
  order summary section
  empty cart section
+
+ move routes to routes files I You, a few seconds ago Uncommitt
+
+- Create dedicated controllers
+Add to cart functionality
+connect to mongo db
+use connect-mongo for session store
+    dependancies
+        mongoose, express-session, connect-mongo, dotenv
+- axios to send ajax request
+- install notification library npm i noty https://ned.im/noty/#/
 
 Create 0rder controller and link it in server.js
 

@@ -19,18 +19,19 @@
           Latest
         </h1> 
     <div class="grid grid-cols-4 col-gap-12 row-gap-16 ">
+        <% grocery.forEach(function(grocery){ %>
           <div class="w-64">
             
             <img class="h-40 mb-4 mx-auto"
-            src="/img/img1.jpg" alt=""> 
+            src="/img/<%=grocery.image%>" alt=""> 
              <div class="text-center">
-                 <h2 class="mb-4 text-lg">Ginger</h2>
-                 <span class="size py-1 px-4 rounded-full uppercase text-xs ">250g</span>
+                 <h2 class="mb-4 text-lg"><%= grocery.name%></h2>
+                 <span class="size py-1 px-4 rounded-full uppercase text-xs "><%= grocery.size%></span>
                  <div class="flex-items-center justify-around mt-6 "></div>
-
+<!-- // 'size ' and 'quantity' are same in database -->
                  <div class="mb-4 " >
-                     <span class="font-bold text-lg px-10">₹50</span>
-                     <button class="add-to-cart py-1 px-6 rounded-full flex-items-center font-bold">
+                     <span class="font-bold text-lg px-10">₹<%= grocery.price%></span>
+                     <button data-grocery="<%=JSON.stringify(grocery)%>" class="add-to-cart py-1 px-6 rounded-full flex-items-center font-bold">
                          <span>+</span>
                          <span class="ml-4 ">Add</span>
                      </button>
@@ -38,176 +39,10 @@
              </div>
           </div>
          
-          <div class="w-64">
-            
-            <img class="h-40 mb-4 mx-auto"
-            src="/img/img1.jpg" alt=""> 
-             <div class="text-center">
-                 <h2 class="mb-4 text-lg">Ginger</h2>
-                 <span class="size py-1 px-4 rounded-full uppercase text-xs ">250g</span>
-                 <div class="flex-items-center justify-around mt-6 "></div>
+    <%}) %>
 
-                 <div class="mb-4 " >
-                     <span class="font-bold text-lg px-10">₹50</span>
-                     <button class="add-to-cart py-1 px-6 rounded-full flex-items-center font-bold">
-                         <span>+</span>
-                         <span class="ml-4 ">Add</span>
-                     </button>
-                 </div>
-             </div>
-          </div>
          
-          <div class="w-64">
-            
-            <img class="h-40 mb-4 mx-auto"
-            src="/img/img1.jpg" alt=""> 
-             <div class="text-center">
-                 <h2 class="mb-4 text-lg">Ginger</h2>
-                 <span class="size py-1 px-4 rounded-full uppercase text-xs ">250g</span>
-                 <div class="flex-items-center justify-around mt-6 "></div>
 
-                 <div class="mb-4 " >
-                     <span class="font-bold text-lg px-10">₹50</span>
-                     <button class="add-to-cart py-1 px-6 rounded-full flex-items-center font-bold">
-                         <span>+</span>
-                         <span class="ml-4 ">Add</span>
-                     </button>
-                 </div>
-             </div>
-          </div>
-         
-          <div class="w-64">
-            
-            <img class="h-40 mb-4 mx-auto"
-            src="/img/img1.jpg" alt=""> 
-             <div class="text-center">
-                 <h2 class="mb-4 text-lg">Ginger</h2>
-                 <span class="size py-1 px-4 rounded-full uppercase text-xs ">250g</span>
-                 <div class="flex-items-center justify-around mt-6 "></div>
-
-                 <div class="mb-4 " >
-                     <span class="font-bold text-lg px-10">₹50</span>
-                     <button class="add-to-cart py-1 px-6 rounded-full flex-items-center font-bold">
-                         <span>+</span>
-                         <span class="ml-4 ">Add</span>
-                     </button>
-                 </div>
-             </div>
-          </div>
-         
-          <div class="w-64">
-            
-            <img class="h-40 mb-4 mx-auto"
-            src="/img/img1.jpg" alt=""> 
-             <div class="text-center">
-                 <h2 class="mb-4 text-lg">Ginger</h2>
-                 <span class="size py-1 px-4 rounded-full uppercase text-xs ">250g</span>
-                 <div class="flex-items-center justify-around mt-6 "></div>
-
-                 <div class="mb-4 " >
-                     <span class="font-bold text-lg px-10">₹50</span>
-                     <button class="add-to-cart py-1 px-6 rounded-full flex-items-center font-bold">
-                         <span>+</span>
-                         <span class="ml-4 ">Add</span>
-                     </button>
-                 </div>
-             </div>
-          </div>
-         
-          <div class="w-64">
-            
-            <img class="h-40 mb-4 mx-auto"
-            src="/img/img1.jpg" alt=""> 
-             <div class="text-center">
-                 <h2 class="mb-4 text-lg">Ginger</h2>
-                 <span class="size py-1 px-4 rounded-full uppercase text-xs ">250g</span>
-                 <div class="flex-items-center justify-around mt-6 "></div>
-
-                 <div class="mb-4 " >
-                     <span class="font-bold text-lg px-10">₹50</span>
-                     <button class="add-to-cart py-1 px-6 rounded-full flex-items-center font-bold">
-                         <span>+</span>
-                         <span class="ml-4 ">Add</span>
-                     </button>
-                 </div>
-             </div>
-          </div>
-         
-          <div class="w-64">
-            
-            <img class="h-40 mb-4 mx-auto"
-            src="/img/img1.jpg" alt=""> 
-             <div class="text-center">
-                 <h2 class="mb-4 text-lg">Ginger</h2>
-                 <span class="size py-1 px-4 rounded-full uppercase text-xs ">250g</span>
-                 <div class="flex-items-center justify-around mt-6 "></div>
-
-                 <div class="mb-4 " >
-                     <span class="font-bold text-lg px-10">₹50</span>
-                     <button class="add-to-cart py-1 px-6 rounded-full flex-items-center font-bold">
-                         <span>+</span>
-                         <span class="ml-4 ">Add</span>
-                     </button>
-                 </div>
-             </div>
-          </div>
-         
-          <div class="w-64">
-            
-            <img class="h-40 mb-4 mx-auto"
-            src="/img/img1.jpg" alt=""> 
-             <div class="text-center">
-                 <h2 class="mb-4 text-lg">Ginger</h2>
-                 <span class="size py-1 px-4 rounded-full uppercase text-xs ">250g</span>
-                 <div class="flex-items-center justify-around mt-6 "></div>
-
-                 <div class="mb-4 " >
-                     <span class="font-bold text-lg px-10">₹50</span>
-                     <button class="add-to-cart py-1 px-6 rounded-full flex-items-center font-bold">
-                         <span>+</span>
-                         <span class="ml-4 ">Add</span>
-                     </button>
-                 </div>
-             </div>
-          </div>
-         
-          <div class="w-64">
-            
-            <img class="h-40 mb-4 mx-auto"
-            src="/img/img1.jpg" alt=""> 
-             <div class="text-center">
-                 <h2 class="mb-4 text-lg">Ginger</h2>
-                 <span class="size py-1 px-4 rounded-full uppercase text-xs ">250g</span>
-                 <div class="flex-items-center justify-around mt-6 "></div>
-
-                 <div class="mb-4 " >
-                     <span class="font-bold text-lg px-10">₹50</span>
-                     <button class="add-to-cart py-1 px-6 rounded-full flex-items-center font-bold">
-                         <span>+</span>
-                         <span class="ml-4 ">Add</span>
-                     </button>
-                 </div>
-             </div>
-          </div>
-         
-          <div class="w-64">
-            
-            <img class="h-40 mb-4 mx-auto"
-            src="/img/img1.jpg" alt=""> 
-             <div class="text-center">
-                 <h2 class="mb-4 text-lg">Ginger</h2>
-                 <span class="size py-1 px-4 rounded-full uppercase text-xs ">250g</span>
-                 <div class="flex-items-center justify-around mt-6 "></div>
-
-                 <div class="mb-4 " >
-                     <span class="font-bold text-lg px-10">₹50</span>
-                     <button class="add-to-cart py-1 px-6 rounded-full flex-items-center font-bold">
-                         <span>+</span>
-                         <span class="ml-4 ">Add</span>
-                     </button>
-                 </div>
-             </div>
-          </div>
          
           
           
