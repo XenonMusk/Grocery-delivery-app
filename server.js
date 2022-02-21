@@ -9,6 +9,7 @@ const mongoose= require('mongoose') //importing mongoose
 const session = require('express-session')
 const flash =require('express-flash')
 const MongoDbStore = require('connect-mongo')
+const passport =require('passport')
 
 //Databse connection
 
@@ -24,6 +25,7 @@ const MongoDbStore = require('connect-mongo')
 mongoose.connect("mongodb://localhost:27017/grocery", { useNewurlParser: true, useUnifiedTopology: true } )
 .then( () => console.log("connection successfull...."))
 .catch((err) => console.log(err)) ;
+
 
 
 //session store
@@ -42,7 +44,13 @@ app.use(session({
    cookie: { maxAge: 1000 * 60 * 60 * 24 } // Time in ms ==24 hrs
 
 }))
+// Passport  Configuration
+const passportInit =require('./app/config/passport')
+passportInit(passport)
+app.use(passport.initialize())
+app.use(passport.session())
 app.use(flash())
+
 // set Template engine
 app.use(expressLayout)
 app.set('views', path.join (__dirname, '/resources/views'))
@@ -51,6 +59,7 @@ app.set('view engine', 'ejs')
 //Assets
 // app.listen(express.static('public'))
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 
 
@@ -58,6 +67,7 @@ app.use(express.json())
 
 app.use((req,res,next)=>{
     res.locals.session=req.session
+    res.locals.user =req.user
     next()
 })
 
