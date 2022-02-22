@@ -1,6 +1,7 @@
 //client side
 import axios from 'axios'
 import Noty from 'noty'
+import {initAdmin} from './admin'
 let addToCart =document.querySelectorAll('.add-to-cart')
 let cartCounter=document.querySelector('#cartCounter')
 
@@ -29,3 +30,11 @@ addToCart.forEach((btn)=>{
       updateCart(grocery)
     })
 })
+//removing alert message after n seconds
+const alertMsg =document.querySelector('#success-alert')
+if(alertMsg){
+    setTimeout(()=> {
+        alertMsg.remove()
+    },1700)
+}
+initAdmin()
