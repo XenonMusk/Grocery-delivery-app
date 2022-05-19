@@ -76,14 +76,20 @@ function updateStatus(order){
 }
 updateStatus(order);
 
-//Socket
+/// Socket
+let socket = io()
 
-let socket =io()
-//  Join
-if( order){
+// Join
+if(order) {
     socket.emit('join', `order_${order._id}`)
-
 }
+let adminAreaPath = window.location.pathname
+if(adminAreaPath.includes('admin')) {
+    initAdmin(socket)
+    socket.emit('join', 'adminRoom')
+}
+
+
 socket.on('orderUpdated', (data) => {
     const updatedOrder = { ...order }
     updatedOrder.updatedAt = moment().format()

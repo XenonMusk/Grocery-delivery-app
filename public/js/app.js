@@ -2299,12 +2299,19 @@ function updateStatus(order) {
   });
 }
 
-updateStatus(order); //Socket
+updateStatus(order); /// Socket
 
-var socket = io(); //  Join
+var socket = io(); // Join
 
 if (order) {
   socket.emit('join', "order_".concat(order._id));
+}
+
+var adminAreaPath = window.location.pathname;
+
+if (adminAreaPath.includes('admin')) {
+  (0,_admin__WEBPACK_IMPORTED_MODULE_3__.initAdmin)(socket);
+  socket.emit('join', 'adminRoom');
 }
 
 socket.on('orderUpdated', function (data) {

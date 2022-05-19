@@ -279,39 +279,40 @@ body {
   font-family: "Baloo Bhai 2", sans-serif;
   -webkit-font-smoothing: antialiased;
   color: #232323;
+  background-color: #f5eec2;
 }
 
 nav li a {
   transition: all 0.3s ease-in-out;
 }
 nav li a:hover {
-  color: #FE5F1E;
+  color: #416a59;
 }
 
 nav li:last-child a {
-  background: #FE5F1E;
+  background: #416a59;
 }
 nav li:last-child a:hover {
-  background-color: #b23301;
+  background-color: #73a24e;
 }
 
 section.hero {
-  background: #F8F8F8;
+  background: #a9c25d;
 }
 
 .size {
-  background: #F8F8F8;
+  background: #cccccc6e;
 }
 
 .add-to-cart {
-  border: 2px solid #FE5F1E;
-  color: #FE5F1E;
+  border: 2px solid #416a59;
+  color: #416a59;
   transition: all 0.3s ease-in-out;
 }
 .add-to-cart:hover {
-  background: #FE5F1E;
-  border-color: #fff;
-  color: #fff;
+  background: #416a59;
+  border-color: #f5eec2;
+  color: #f5eec2;
 }
 .add-to-cart:focus {
   outline: none;
@@ -319,28 +320,28 @@ section.hero {
 
 .btn-primary {
   transition: all 0.3s ease-in-out;
-  background-color: #FE5F1E;
+  background-color: #416a59;
   transform: smooth;
 }
 .btn-primary:hover {
-  background: #b23301;
+  background: #73a24e;
 }
 
 section.cart {
-  background: #F8F8F8;
+  background: #a9c25d;
 }
 section.cart .amount {
-  color: #FE5F1E;
+  color: #416a59;
 }
 
 section.login {
-  background: #F8F8F8;
+  background: #a9c25d;
 }
 section.login a {
-  color: #FE5F1E;
+  color: #416a59;
 }
 section.login a:hover {
-  color: #b23301;
+  color: #73a24e;
 }
 
 .noty_theme__mint {
@@ -350,11 +351,11 @@ section.login a:hover {
 }
 
 a.link {
-  color: #FE5F1E;
+  color: #416a59;
 }
 
 section.status {
-  background: #F8F8F8;
+  background: #a9c25d;
   min-height: calc(100vh - 180px);
 }
 
@@ -380,7 +381,7 @@ section.status {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  box-shadow: 0 1px 10px #F8F8F8;
+  box-shadow: 0 1px 10px #a9c25d;
 }
 
 .status-box ul li span:before {
@@ -428,7 +429,7 @@ section.status {
 }
 
 .status-box ul li:nth-child(5) span:after {
-  box-shadow: 0 20px 1px 20px #F8F8F8;
+  box-shadow: 0 20px 1px 20px #a9c25d;
 }
 
 .status-box ul li.step-completed:before {
@@ -444,14 +445,31 @@ section.status {
 }
 
 .status-box ul li.current span {
-  color: #FE5F1E;
+  color: #416a59;
 }
 
 .status-box ul li.current span:after {
-  background: #FE5F1E;
+  background: #416a59;
 }
 
 .status-box ul li small {
   float: right;
   font-size: 16px;
+}
+
+@media (max-width: 1060px) {
+  .container {
+    max-width: 90%;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 768px) {
+  .status-box ul li span:before {
+    font-size: 30px;
+  }
 }

@@ -6,6 +6,7 @@ body{
     font-family: 'Baloo Bhai 2', sans-serif;
     -webkit-font-smoothing: antialiased;
     color: $dark;
+    background-color: $pure;
    
 }
 
@@ -23,9 +24,12 @@ nav li:last-child a{
 }
 section.hero{
     background: $secondary;
+    // background-image: url('/img/hero1.jpg');
+   
 }
+
 .size {
-background: $secondary;
+background: $gray;
 }
 .add-to-cart {
     border: 2px solid $primary;
@@ -145,17 +149,17 @@ top: 0px;
 }  
 //line
 .status-box ul li.step-completed:before{
-    background: $gray;
+    background: $gray-d;
 
 } 
 //dots
 .status-box ul li.step-completed span:after{
-    background: $gray;
+    background: $gray-d;
 
 } 
 //text
 .status-box ul li.step-completed span{
-   color: $gray;
+   color: $gray-d;
 
 } 
 //for current status
@@ -168,4 +172,19 @@ top: 0px;
 .status-box ul li small{
     float:  right;
     font-size: 16px;
+}
+@media(max-width: 1060px){
+    .container{
+        max-width: 90%;
+    }
+    table{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+@media (max-width: 768px){
+    .status-box ul li span:before{
+        font-size: 30px;
+    }
 }

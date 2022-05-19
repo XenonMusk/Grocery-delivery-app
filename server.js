@@ -34,6 +34,7 @@ mongoose.connect("mongodb://localhost:27017/grocery", { useNewurlParser: true, u
 //     mongooseConnection: connection,
 //     collection:'sessions'
 // })
+
 //Event emitter
 const eventEmitter = new Emitter()
 app.set('eventEmitter', eventEmitter)
@@ -93,7 +94,7 @@ const server = app.listen(PORT , () => {
  io.on('connection', (socket)=> {
      //Joining
     //  creating separate room for orders
-    console.log(socket.id)
+    // console.log(socket.id)
     socket.on('join',(orderId)=> {
         
         socket.join(orderId)
